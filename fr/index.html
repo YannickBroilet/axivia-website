@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>AXIVIA — Partenaire en stratégie produit</title>
-<meta name="description" content="AXIVIA aide les entreprises technologiques à prendre des décisions plus claires en matière de produit et de marché — et à transformer leurs choix stratégiques en actions.">
+
+<meta name="description" content="AXIVIA aide les entreprises technologiques à prendre des décisions plus claires en matière de produit et de marché, et à transformer leurs choix stratégiques en actions.">
+
 <meta name="theme-color" content="#071126">
+
 <meta property="og:title" content="AXIVIA — Partenaire en stratégie produit">
 <meta property="og:description" content="Transformer la complexité en clarté.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://axivia.ch/fr/">
+
 <link rel="alternate" hreflang="en" href="https://axivia.ch/">
 <link rel="alternate" hreflang="fr" href="https://axivia.ch/fr/">
 <link rel="alternate" hreflang="x-default" href="https://axivia.ch/">
+
 <link rel="canonical" href="https://axivia.ch/fr/">
-<link rel="icon" type="image/png" href="/assets/axivia-mark-transparent.png">
+
+<link rel="icon" type="image/png" href="/assets/axivia-mark.png">
 
 <style>
+
 :root{
   --navy:#071126;
   --navy-2:#0B132B;
@@ -32,7 +40,9 @@
   --radius:18px;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html{
   scroll-behavior:smooth;
@@ -70,7 +80,9 @@ img{
   color:var(--blue);
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3{
   font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   letter-spacing:-.035em;
   line-height:1.05;
@@ -127,6 +139,7 @@ p{
   background:rgba(255,255,255,.07);
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -151,12 +164,18 @@ header{
   width:205px;
 }
 
-/* Logo blanc prévu pour le fond bleu */
+/*
+   Fond bleu :
+   logo clair
+*/
 .nav-logo-light{
   display:block;
 }
 
-/* Logo foncé uniquement après passage sur fond blanc */
+/*
+   Fond blanc après scroll :
+   logo foncé
+*/
 .nav-logo-dark{
   display:none;
 }
@@ -224,6 +243,7 @@ header{
 .nav.scrolled .mobile-toggle{
   color:var(--ink);
 }
+
 
 /* =========================
    HERO
@@ -343,6 +363,7 @@ header{
   letter-spacing:.12em;
   text-transform:uppercase;
 }
+
 
 /* =========================
    SECTIONS
@@ -694,6 +715,7 @@ section{
   justify-content:center;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -734,6 +756,7 @@ footer{
   font-size:11px;
 }
 
+
 /* =========================
    ANIMATIONS
 ========================= */
@@ -749,6 +772,7 @@ footer{
   transform:none;
 }
 
+
 /* =========================
    MOBILE MENU
 ========================= */
@@ -760,6 +784,7 @@ footer{
 #mobileMenu.open{
   display:block!important;
 }
+
 
 /* =========================
    RESPONSIVE
@@ -829,6 +854,7 @@ footer{
   .lens-cell{
     border-bottom:1px solid rgba(255,255,255,.12);
   }
+
 }
 
 @media(max-width:620px){
@@ -893,62 +919,111 @@ footer{
   .footer-bottom div+div{
     margin-top:8px;
   }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
   <div class="container nav" id="nav">
 
-    <!-- Logo clair pour le fond bleu -->
+    <!-- LOGO CLAIR : FOND BLEU -->
     <a href="#top" aria-label="AXIVIA accueil">
+
       <img
         class="nav-logo nav-logo-light"
-        src="/assets/axivia-logo-light-transparent.png"
+        src="/assets/axivia-logo-light.png"
         alt="AXIVIA"
       >
 
-      <!-- Logo foncé uniquement lorsque le header devient blanc -->
+      <!-- LOGO FONCÉ : HEADER BLANC APRÈS SCROLL -->
       <img
         class="nav-logo nav-logo-dark"
-        src="/assets/axivia-logo-dark-transparent.png"
+        src="/assets/axivia-logo-dark.png"
         alt="AXIVIA"
       >
+
     </a>
 
+
     <nav class="nav-links" aria-label="Navigation principale">
+
       <a href="#approach">Approche</a>
+
       <a href="#services">Services</a>
+
       <a href="#about">À propos</a>
+
       <a href="../">EN</a>
-      <a class="nav-cta" href="#contact">Parlons-en</a>
+
+      <a class="nav-cta" href="#contact">
+        Parlons-en
+      </a>
+
     </nav>
+
 
     <button
       class="mobile-toggle"
       aria-label="Ouvrir la navigation"
       onclick="document.getElementById('mobileMenu').classList.toggle('open')"
-    >☰</button>
+    >
+      ☰
+    </button>
 
   </div>
+
 </header>
 
-<div id="mobileMenu" style="position:fixed;z-index:45;inset:0;background:#071126;color:white;padding:120px 24px 40px">
 
-  <div style="display:grid;gap:26px;font-size:28px;font-weight:650">
+<div
+  id="mobileMenu"
+  style="
+    position:fixed;
+    z-index:45;
+    inset:0;
+    background:#071126;
+    color:white;
+    padding:120px 24px 40px;
+  "
+>
+
+  <div
+    style="
+      display:grid;
+      gap:26px;
+      font-size:28px;
+      font-weight:650;
+    "
+  >
 
     <a href="#approach">Approche</a>
+
     <a href="#services">Services</a>
+
     <a href="#about">À propos</a>
+
     <a href="#contact">Parlons-en</a>
+
     <a href="../">EN</a>
 
   </div>
+
 </div>
 
+
 <main id="top">
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -959,37 +1034,55 @@ footer{
       <!-- LOGO CLAIR SUR FOND BLEU -->
       <img
         class="hero-logo"
-        src="/assets/axivia-logo-light-transparent.png"
+        src="/assets/axivia-logo-light.png"
         alt="AXIVIA"
       >
+
 
       <h1>
         Transformer la <span>complexité</span> en clarté.
       </h1>
 
+
       <p class="hero-sub">
+
         Nous aidons les entreprises technologiques à prendre des décisions
         plus claires en matière de produit et de marché — et à transformer
         leurs choix stratégiques en actions.
+
       </p>
+
 
       <div class="hero-actions">
 
-        <a class="btn btn-primary" href="#services">
-          Découvrir notre approche <span>→</span>
+        <a
+          class="btn btn-primary"
+          href="#services"
+        >
+          Découvrir notre approche
+          <span>→</span>
         </a>
 
-        <a class="btn btn-ghost" href="#contact">
-          Quel problème cherchez-vous à résoudre&nbsp;? <span>→</span>
+
+        <a
+          class="btn btn-ghost"
+          href="#contact"
+        >
+          Quel problème cherchez-vous à résoudre&nbsp;?
+          <span>→</span>
         </a>
 
       </div>
 
+
       <div class="scroll-note">
+
         Partenaire indépendant en stratégie produit · Suisse
+
       </div>
 
     </div>
+
 
     <div class="hero-side reveal">
 
@@ -999,14 +1092,18 @@ footer{
           La question
         </div>
 
+
         <strong>
           Quand la technologie est claire, mais pas la décision.
         </strong>
 
+
         <p>
+
           AXIVIA apporte de la structure aux décisions complexes liées au
           produit et au marché — pour permettre aux équipes dirigeantes de
           comprendre les options, d’arbitrer et d’avancer.
+
         </p>
 
       </div>
@@ -1016,6 +1113,11 @@ footer{
   </div>
 
 </section>
+
+
+<!-- =========================
+     PROBLÈME
+========================= -->
 
 <section class="problem">
 
@@ -1027,29 +1129,42 @@ footer{
         01 — Le défi
       </div>
 
+
       <h2 style="margin-top:14px">
+
         Le plus difficile est souvent de décider ce qui compte.
+
       </h2>
 
     </div>
 
+
     <div class="problem-copy">
 
       <p>
-        La technologie évolue rapidement. Les marchés changent.
+
+        La technologie évolue rapidement.
+        Les marchés changent.
         Les attentes des clients évoluent.
+
       </p>
 
+
       <p style="margin-top:22px">
+
         Le plus difficile n’est souvent pas de comprendre ce qui est possible
         — mais de décider
         <strong>
           ce qui compte, ce qu’il faut prioriser et quelle doit être la prochaine étape.
         </strong>
+
       </p>
 
+
       <p style="margin-top:22px">
+
         AXIVIA aide à transformer la complexité en une direction stratégique claire.
+
       </p>
 
     </div>
@@ -1058,7 +1173,15 @@ footer{
 
 </section>
 
-<section class="approach" id="approach">
+
+<!-- =========================
+     APPROCHE
+========================= -->
+
+<section
+  class="approach"
+  id="approach"
+>
 
   <div class="container reveal">
 
@@ -1070,21 +1193,27 @@ footer{
           02 — Approche
         </div>
 
+
         <h2 style="margin-top:14px">
           Comprendre. Décider. Agir.
         </h2>
 
       </div>
 
+
       <p>
+
         Nous nous concentrons sur la décision qui se trouve derrière le travail
         — en apportant des éléments concrets, du recul et de la structure aux
         moments qui comptent.
+
       </p>
 
     </div>
 
+
     <div class="steps">
+
 
       <article class="step">
 
@@ -1092,16 +1221,21 @@ footer{
           01
         </div>
 
+
         <h3>
           Comprendre
         </h3>
 
+
         <p>
+
           Clarifier la situation, les éléments disponibles et les contraintes
           qui entourent la décision.
+
         </p>
 
       </article>
+
 
       <article class="step">
 
@@ -1109,16 +1243,21 @@ footer{
           02
         </div>
 
+
         <h3>
           Décider
         </h3>
 
+
         <p>
+
           Structurer les options, les arbitrages et les priorités pour faire
           émerger la voie la plus pertinente.
+
         </p>
 
       </article>
+
 
       <article class="step">
 
@@ -1126,16 +1265,21 @@ footer{
           03
         </div>
 
+
         <h3>
           Agir
         </h3>
 
+
         <p>
+
           Traduire le choix stratégique en priorités claires, en prochaines
           étapes concrètes et en dynamique d’action.
+
         </p>
 
       </article>
+
 
     </div>
 
@@ -1143,9 +1287,18 @@ footer{
 
 </section>
 
-<section class="services" id="services">
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+  class="services"
+  id="services"
+>
 
   <div class="container reveal">
+
 
     <div class="section-head">
 
@@ -1155,20 +1308,26 @@ footer{
           03 — Services
         </div>
 
+
         <h2 style="margin-top:14px">
           Deux façons d’avancer.
         </h2>
 
       </div>
 
+
       <p>
+
         Un accompagnement ciblé dans les moments où une décision plus claire
         en matière de produit ou de marché peut réellement changer la suite.
+
       </p>
 
     </div>
 
+
     <div class="service-grid">
+
 
       <article class="service">
 
@@ -1176,18 +1335,27 @@ footer{
           01 — SPRINT CIBLÉ
         </div>
 
+
         <h3>
           Sprint d’opportunité
         </h3>
 
+
         <p>
+
           Un sprint stratégique ciblé pour évaluer une opportunité,
           challenger les hypothèses et déterminer si elle mérite d’aller plus loin.
+
         </p>
 
+
         <div class="best">
-          Nouvelles opportunités · Technologies émergentes · Nouveaux marchés · Questions stratégiques
+
+          Nouvelles opportunités · Technologies émergentes ·
+          Nouveaux marchés · Questions stratégiques
+
         </div>
+
 
         <a href="#contact">
           Discuter d’une opportunité →
@@ -1195,24 +1363,34 @@ footer{
 
       </article>
 
+
       <article class="service">
 
         <div class="num">
           02 — PARTENARIAT CONTINU
         </div>
 
+
         <h3>
           Partenariat stratégique produit
         </h3>
 
+
         <p>
+
           Un accompagnement stratégique senior pour les entreprises confrontées
           à des décisions complexes en matière de produit, de portefeuille ou de marché.
+
         </p>
 
+
         <div class="best">
-          Stratégie produit · Décisions de portefeuille · Priorisation · Leadership produit
+
+          Stratégie produit · Décisions de portefeuille ·
+          Priorisation · Leadership produit
+
         </div>
+
 
         <a href="#contact">
           Démarrer une conversation →
@@ -1220,11 +1398,17 @@ footer{
 
       </article>
 
+
     </div>
 
   </div>
 
 </section>
+
+
+<!-- =========================
+     POUR QUI
+========================= -->
 
 <section class="audience">
 
@@ -1234,11 +1418,19 @@ footer{
       04 — Pour qui
     </div>
 
-    <h2 style="margin-top:14px;margin-bottom:50px">
+
+    <h2
+      style="
+        margin-top:14px;
+        margin-bottom:50px;
+      "
+    >
       Pour les décisions qui comptent.
     </h2>
 
+
     <div class="audience-grid">
+
 
       <article class="audience-card">
 
@@ -1247,10 +1439,13 @@ footer{
         </h3>
 
         <p>
+
           Lorsque la clarté stratégique est nécessaire pour faire avancer l’entreprise.
+
         </p>
 
       </article>
+
 
       <article class="audience-card">
 
@@ -1259,11 +1454,14 @@ footer{
         </h3>
 
         <p>
+
           Lorsque les priorités, le portefeuille ou la direction produit
           doivent être challengés et clarifiés.
+
         </p>
 
       </article>
+
 
       <article class="audience-card">
 
@@ -1272,11 +1470,14 @@ footer{
         </h3>
 
         <p>
+
           Lorsque les possibilités technologiques doivent être traduites
           en opportunités produit pertinentes.
+
         </p>
 
       </article>
+
 
       <article class="audience-card">
 
@@ -1285,11 +1486,14 @@ footer{
         </h3>
 
         <p>
+
           Lorsque les opportunités de marché nécessitent un meilleur alignement
           entre produit et stratégie.
+
         </p>
 
       </article>
+
 
     </div>
 
@@ -1297,9 +1501,15 @@ footer{
 
 </section>
 
+
+<!-- =========================
+     POURQUOI AXIVIA
+========================= -->
+
 <section class="why">
 
   <div class="container why-grid reveal">
+
 
     <div>
 
@@ -1307,13 +1517,16 @@ footer{
         05 — Pourquoi AXIVIA
       </div>
 
+
       <h2 style="margin-top:14px">
         La clarté avant la complexité.
       </h2>
 
     </div>
 
+
     <div class="why-list">
+
 
       <article class="why-item">
 
@@ -1321,11 +1534,13 @@ footer{
           01
         </div>
 
+
         <div>
 
           <h3>
             Une réflexion senior.
           </h3>
+
 
           <p>
             Une expertise stratégique ciblée, sans couches inutiles.
@@ -1335,11 +1550,13 @@ footer{
 
       </article>
 
+
       <article class="why-item">
 
         <div class="icon">
           02
         </div>
+
 
         <div>
 
@@ -1347,14 +1564,18 @@ footer{
             Les faits avant les hypothèses.
           </h3>
 
+
           <p>
+
             Des décisions fondées sur les signaux pertinents liés à la technologie,
             aux utilisateurs et au marché.
+
           </p>
 
         </div>
 
       </article>
+
 
       <article class="why-item">
 
@@ -1362,20 +1583,25 @@ footer{
           03
         </div>
 
+
         <div>
 
           <h3>
             Focus sur la décision.
           </h3>
 
+
           <p>
+
             Nous ne faisons pas de stratégie pour faire de la stratégie.
             Nous travaillons vers une décision.
+
           </p>
 
         </div>
 
       </article>
+
 
       <article class="why-item">
 
@@ -1383,19 +1609,24 @@ footer{
           04
         </div>
 
+
         <div>
 
           <h3>
             De l’analyse à l’action.
           </h3>
 
+
           <p>
+
             Le résultat est une direction plus claire et une prochaine étape concrète.
+
           </p>
 
         </div>
 
       </article>
+
 
     </div>
 
@@ -1403,9 +1634,15 @@ footer{
 
 </section>
 
+
+<!-- =========================
+     GRILLE STRATÉGIQUE
+========================= -->
+
 <section class="lens">
 
   <div class="container reveal">
+
 
     <div class="lens-head">
 
@@ -1413,38 +1650,68 @@ footer{
         06 — Notre grille stratégique
       </div>
 
+
       <h2 style="margin-top:14px">
         Regarder la décision sous tous ses angles.
       </h2>
 
+
       <p>
+
         Nous réunissons les forces qui façonnent une décision produit,
         puis les mettons en relation pour identifier la voie la plus pertinente.
+
       </p>
 
     </div>
 
+
     <div class="lens-flow">
 
+
       <div class="lens-cell">
+
         <span>01</span>
-        <strong>Technologie</strong>
+
+        <strong>
+          Technologie
+        </strong>
+
       </div>
 
+
       <div class="lens-cell">
+
         <span>02</span>
-        <strong>Utilisateurs</strong>
+
+        <strong>
+          Utilisateurs
+        </strong>
+
       </div>
 
+
       <div class="lens-cell">
+
         <span>03</span>
-        <strong>Marché</strong>
+
+        <strong>
+          Marché
+        </strong>
+
       </div>
 
+
       <div class="lens-cell">
+
         <span>04</span>
-        <strong>Décision stratégique</strong>
+
+        <strong>
+          Décision stratégique
+        </strong>
+
       </div>
+
 
     </div>
 
@@ -1452,9 +1719,18 @@ footer{
 
 </section>
 
-<section class="about" id="about">
+
+<!-- =========================
+     À PROPOS
+========================= -->
+
+<section
+  class="about"
+  id="about"
+>
 
   <div class="container about-grid reveal">
+
 
     <div>
 
@@ -1462,30 +1738,44 @@ footer{
         07 — À propos
       </div>
 
+
       <h2 style="margin-top:14px">
+
         Un partenaire stratégique lorsque la clarté compte.
+
       </h2>
 
     </div>
 
+
     <div class="about-copy">
 
+
       <p>
+
         AXIVIA est un partenaire indépendant en stratégie produit qui aide
         les entreprises technologiques à naviguer dans des décisions complexes
         liées au produit et au marché.
+
       </p>
 
+
       <p>
+
         Nous combinons réflexion stratégique, expertise produit et compréhension
         du marché pour aider les équipes à comprendre leurs options,
         prendre de meilleures décisions et avancer avec confiance.
+
       </p>
 
+
       <p>
+
         Notre rôle est volontairement ciblé : apporter de la clarté là où
         la complexité ralentit la prochaine décision.
+
       </p>
+
 
     </div>
 
@@ -1493,25 +1783,40 @@ footer{
 
 </section>
 
-<section class="cta" id="contact">
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="cta"
+  id="contact"
+>
 
   <div class="container reveal">
+
 
     <div class="eyebrow">
       08 — Démarrer une conversation
     </div>
 
+
     <h2>
       Quel problème cherchez-vous à résoudre&nbsp;?
     </h2>
 
+
     <p>
+
       Que vous évaluiez une opportunité, soyez confronté à une décision produit
       complexe ou recherchiez un accompagnement stratégique expérimenté,
       commençons par la question qui compte.
+
     </p>
 
+
     <div class="hero-actions">
+
 
       <a
         class="btn btn-primary"
@@ -1520,9 +1825,14 @@ footer{
         Parlons-en →
       </a>
 
-      <a class="btn btn-ghost" href="#top">
+
+      <a
+        class="btn btn-ghost"
+        href="#top"
+      >
         Retour en haut ↑
       </a>
+
 
     </div>
 
@@ -1530,35 +1840,59 @@ footer{
 
 </section>
 
+
 </main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
   <div class="container">
 
+
     <div class="footer-top">
 
-      <!-- LOGO CLAIR SUR FOND BLEU FONCÉ -->
+
+      <!-- LOGO CLAIR SUR FOND FONCÉ -->
       <img
         class="footer-logo"
-        src="/assets/axivia-logo-light-transparent.png"
+        src="/assets/axivia-logo-light.png"
         alt="AXIVIA"
       >
 
+
       <div class="footer-links">
-        <a href="#approach">Approche</a>
-        <a href="#services">Services</a>
-        <a href="#about">À propos</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#approach">
+          Approche
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#about">
+          À propos
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </div>
 
     </div>
+
 
     <div class="footer-bottom">
 
       <div>
         © 2026 AXIVIA Sàrl · Suisse
       </div>
+
 
       <div>
         Ch. des Charrières 1e · Saint-Aubin-Sauges
@@ -1570,11 +1904,14 @@ footer{
 
 </footer>
 
+
 <script>
 
-const nav = document.getElementById('nav');
+/* =========================
+   HEADER
+========================= */
 
-const mobile = document.getElementById('mobileMenu');
+const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', () => {
 
@@ -1585,13 +1922,20 @@ window.addEventListener('scroll', () => {
 
 });
 
+
+/* =========================
+   ANIMATIONS
+========================= */
+
 const observer = new IntersectionObserver(
   entries => {
 
     entries.forEach(entry => {
 
       if(entry.isIntersecting){
+
         entry.target.classList.add('visible');
+
       }
 
     });
@@ -1602,21 +1946,32 @@ const observer = new IntersectionObserver(
   }
 );
 
+
 document
   .querySelectorAll('.reveal')
   .forEach(element => observer.observe(element));
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const mobile = document.getElementById('mobileMenu');
 
 document
   .querySelectorAll('#mobileMenu a')
   .forEach(link => {
 
     link.addEventListener('click', () => {
+
       mobile.classList.remove('open');
+
     });
 
   });
 
 </script>
+
 
 </body>
 </html>
