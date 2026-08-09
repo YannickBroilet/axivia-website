@@ -229,6 +229,44 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
  .founder-copy .quote{font-size:25px}
 }
 
+
+/* AXIVIA V6 — complete showcase layer */
+.capability{background:#fff}
+.capability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:45px}
+.capability-card{padding:28px;border:1px solid #e5e9f0;border-radius:15px;min-height:205px;background:#fff}
+.capability-card .num,.phase .num,.perspective .num{font-size:11px;letter-spacing:.14em;font-weight:800;color:#0066ff}
+.capability-card h3{margin:14px 0 10px;font-size:19px}
+.capability-card p{font-size:14px;line-height:1.6;color:#53627d}
+.process{background:#071126;color:#fff}
+.process-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}
+.process-head p{color:#b9c6da;font-size:18px}
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);margin-top:48px}
+.phase{background:#071126;padding:32px;min-height:280px}
+.phase h3{font-size:24px;margin:14px 0 12px}
+.phase p{color:#aebbd0;font-size:14px;line-height:1.6}
+.phase .deliver{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#fff}
+.sectors{background:#f6f7f9}
+.sector-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.sector-pill{padding:13px 17px;border:1px solid #dfe5ee;border-radius:999px;background:#fff;font-size:13px;font-weight:650}
+.outcomes{background:#fff}
+.outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}
+.outcome{padding:28px;border-top:2px solid #071126;background:#f8f9fb}
+.outcome strong{font-size:20px}
+.outcome p{color:#53627d;margin-top:10px}
+.perspectives{background:#f6f7f9}
+.perspective-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.perspective{padding:30px;background:#fff;border:1px solid #e5e9f0;border-radius:15px;min-height:220px}
+.perspective h3{font-size:22px;margin:16px 0 10px}
+.perspective p{color:#53627d;font-size:14px;line-height:1.6}
+.perspective a{display:inline-block;margin-top:20px;font-weight:750;font-size:13px;color:#0066ff}
+@media(max-width:900px){
+ .capability-grid{grid-template-columns:repeat(2,1fr)}
+ .process-head{grid-template-columns:1fr}
+ .phase-grid,.perspective-grid{grid-template-columns:1fr}
+ .outcome-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){.capability-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 
@@ -355,6 +393,24 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
   </div>
 </section>
 
+
+<section class="process" id="method">
+  <div class="container reveal">
+    <div class="process-head">
+      <div>
+        <div class="eyebrow"><span data-i18n="processEyebrow">How a deeper partnership works</span></div>
+        <h2 style="margin-top:14px"><span data-i18n="processTitle">Discover. Define. Activate.</span></h2>
+      </div>
+      <p><span data-i18n="processLead">For complex product and market questions, AXIVIA moves from shared understanding to strategic choice, then from strategy to action.</span></p>
+    </div>
+    <div class="phase-grid">
+      <article class="phase"><div class="num">01 — DISCOVER</div><h3>Discover</h3><p data-i18n="phase1">Build a shared understanding of the current strategy, technology, product, users, market, competition, organisation and constraints.</p><div class="deliver"><span data-i18n="phase1Deliver">Core output: AXIVIA Insight Map</span></div></article>
+      <article class="phase"><div class="num">02 — DEFINE</div><h3>Define</h3><p data-i18n="phase2">Turn understanding into choices through segmentation, opportunity identification, needs, value, competitive analysis and prioritisation.</p><div class="deliver"><span data-i18n="phase2Deliver">Core output: AXIVIA Strategic Blueprint</span></div></article>
+      <article class="phase"><div class="num">03 — ACTIVATE</div><h3>Activate</h3><p data-i18n="phase3">Translate strategy into product priorities, roadmaps, experimentation, launch preparation, alignment and measures.</p><div class="deliver"><span data-i18n="phase3Deliver">Core output: AXIVIA Activation Roadmap</span></div></article>
+    </div>
+  </div>
+</section>
+
 <section class="audience">
   <div class="container reveal">
     <div class="eyebrow"><span data-i18n="audienceEyebrow">05 — Who we help</span></div>
@@ -364,6 +420,24 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
       <article class="audience-card"><h3>Product Leaders</h3><p><span data-i18n="productText">When priorities, portfolios or product direction need to be challenged and clarified.</span></p></article>
       <article class="audience-card"><h3>Technology Leaders</h3><p><span data-i18n="techText">When technical possibilities need to be translated into meaningful product opportunities.</span></p></article>
       <article class="audience-card"><h3>Business Leaders</h3><p><span data-i18n="businessText">When market opportunities require stronger product and strategic alignment.</span></p></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="sectors" id="sectors">
+  <div class="container reveal">
+    <div class="eyebrow"><span data-i18n="sectorEyebrow">Where complexity matters</span></div>
+    <h2 style="margin-top:14px"><span data-i18n="sectorTitle">Built for technology-driven environments.</span></h2>
+    <p style="max-width:720px;color:#53627d;font-size:18px;margin-top:18px"><span data-i18n="sectorLead">AXIVIA is intentionally multi-sector. The common denominator is not the industry — it is the complexity of the product, technology and decision.</span></p>
+    <div class="sector-list">
+      <span class="sector-pill" data-i18n="sector1">Industrial technology</span>
+      <span class="sector-pill" data-i18n="sector2">Medtech & health technology</span>
+      <span class="sector-pill" data-i18n="sector3">Deeptech</span>
+      <span class="sector-pill" data-i18n="sector4">Robotics & automation</span>
+      <span class="sector-pill" data-i18n="sector5">Energy & sustainable technologies</span>
+      <span class="sector-pill" data-i18n="sector6">Precision technologies</span>
+      <span class="sector-pill" data-i18n="sector7">Watchmaking</span>
     </div>
   </div>
 </section>
@@ -439,6 +513,23 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
   </div>
 </section>
 
+
+<section class="capability" id="capabilities">
+  <div class="container reveal">
+    <div class="eyebrow"><span data-i18n="capEyebrow">What we help with</span></div>
+    <div class="section-head" style="margin-top:14px">
+      <div><h2><span data-i18n="capTitle">The question may be about the product. The decision is usually bigger.</span></h2></div>
+      <p><span data-i18n="capLead">AXIVIA works across the product, technology and market questions that sit behind important strategic choices.</span></p>
+    </div>
+    <div class="capability-grid">
+      <article class="capability-card"><div class="num">01</div><h3 data-i18n="cap1Title">Opportunity & growth</h3><p data-i18n="cap1Text">Assess new products, technologies, applications, markets, segments and growth opportunities.</p></article>
+      <article class="capability-card"><div class="num">02</div><h3 data-i18n="cap2Title">Product strategy</h3><p data-i18n="cap2Text">Clarify product direction, portfolio choices, value proposition and priorities.</p></article>
+      <article class="capability-card"><div class="num">03</div><h3 data-i18n="cap3Title">Technology to market</h3><p data-i18n="cap3Text">Connect technical capabilities with users, applications and market needs to identify where value can be created.</p></article>
+      <article class="capability-card"><div class="num">04</div><h3 data-i18n="cap4Title">Strategic alignment</h3><p data-i18n="cap4Text">Create clarity across R&D, Product, Commercial and leadership around the choices that matter.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="examples" id="problems">
   <div class="container reveal">
     <div class="eyebrow" data-i18n="problemsEyebrow">The problems behind the brief</div>
@@ -470,6 +561,20 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
   </div>
 </section>
 
+
+<section class="outcomes" id="outcomes">
+  <div class="container reveal">
+    <div class="eyebrow"><span data-i18n="outcomeEyebrow">What you leave with</span></div>
+    <h2 style="margin-top:14px"><span data-i18n="outcomeTitle">Not more pages. Better decisions.</span></h2>
+    <div class="outcome-grid">
+      <article class="outcome"><strong data-i18n="outcome1Title">A clearer understanding</strong><p data-i18n="outcome1Text">The situation, evidence, assumptions and questions are made explicit.</p></article>
+      <article class="outcome"><strong data-i18n="outcome2Title">Clearer choices & priorities</strong><p data-i18n="outcome2Text">Options and trade-offs are structured so the organisation can decide what deserves attention.</p></article>
+      <article class="outcome"><strong data-i18n="outcome3Title">An argued recommendation</strong><p data-i18n="outcome3Text">The strategic direction is grounded in relevant evidence rather than presentation volume.</p></article>
+      <article class="outcome"><strong data-i18n="outcome4Title">A realistic path forward</strong><p data-i18n="outcome4Text">The decision becomes priorities, actions, ownership and next steps.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="founder" id="founder">
   <div class="container founder-grid reveal">
     <div><div class="founder-mark">YB</div></div>
@@ -482,12 +587,25 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
   </div>
 </section>
 
+
+<section class="perspectives" id="perspectives">
+  <div class="container reveal">
+    <div class="eyebrow"><span data-i18n="perspEyebrow">Perspectives</span></div>
+    <h2 style="margin-top:14px"><span data-i18n="perspTitle">Ideas worth thinking about before the next decision.</span></h2>
+    <div class="perspective-grid">
+      <article class="perspective"><div class="num">01</div><h3 data-i18n="persp1Title">From technology to value</h3><p data-i18n="persp1Text">A technical capability becomes strategically interesting when it solves a meaningful user problem in a viable market.</p><a href="#contact" data-i18n="perspCta">Discuss the question →</a></article>
+      <article class="perspective"><div class="num">02</div><h3 data-i18n="persp2Title">The cost of too many opportunities</h3><p data-i18n="persp2Text">More options do not automatically create more growth. Strategic value often comes from deciding what not to pursue.</p><a href="#contact" data-i18n="perspCta">Discuss the question →</a></article>
+      <article class="perspective"><div class="num">03</div><h3 data-i18n="persp3Title">Strategy before execution</h3><p data-i18n="persp3Text">When the decision is unclear, adding execution rarely solves the underlying problem. Clarity has to come first.</p><a href="#contact" data-i18n="perspCta">Discuss the question →</a></article>
+    </div>
+  </div>
+</section>
+
 <section class="surprise">
   <div class="container reveal">
     <div class="eyebrow" data-i18n="surpriseEyebrow">One last question</div>
     <h2 data-i18n="surpriseTitle">There is probably a question behind the question.</h2>
     <p data-i18n="surpriseText">Let's find it — together.</p>
-    <div class="signature-line"><a href="mailto:yannick.broillet@axivia.ch">yannick.broillet@axivia.ch</a></div>
+    <div class="signature-line"><a href="mailto:hello@axivia.ch">hello@axivia.ch</a></div>
   </div>
 </section>
 
@@ -497,7 +615,7 @@ footer{background:#050C1B;color:#92A0B7;padding:38px 0 25px}
     <h2>What are you trying to solve?</h2>
     <p><span data-i18n="contactText">Whether you're assessing an opportunity, facing a difficult product decision or looking for experienced strategic support, start with the question that matters.</span></p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:yannick.broillet@axivia.ch?subject=AXIVIA%20—%20Strategic%20conversation"><span data-i18n="contactCta"><span data-i18n="navContact">Let's talk</span> →</span></a>
+      <a class="btn btn-primary" href="mailto:hello@axivia.ch?subject=AXIVIA%20—%20Strategic%20conversation"><span data-i18n="contactCta"><span data-i18n="navContact">Let's talk</span> →</span></a>
       <a class="btn btn-ghost" href="#top"><span data-i18n="topCta">Back to top ↑</span></a>
     </div>
   </div>
@@ -533,6 +651,17 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const translations = {
   en: {
+    navPerspectives:"Perspectives",
+capEyebrow:"What we help with", capTitle:"The question may be about the product. The decision is usually bigger.", capLead:"AXIVIA works across the product, technology and market questions that sit behind important strategic choices.",
+cap1Title:"Opportunity & growth", cap1Text:"Assess new products, technologies, applications, markets, segments and growth opportunities.", cap2Title:"Product strategy", cap2Text:"Clarify product direction, portfolio choices, value proposition and priorities.", cap3Title:"Technology to market", cap3Text:"Connect technical capabilities with users, applications and market needs to identify where value can be created.", cap4Title:"Strategic alignment", cap4Text:"Create clarity across R&D, Product, Commercial and leadership around the choices that matter.",
+processEyebrow:"How a deeper partnership works", processTitle:"Discover. Define. Activate.", processLead:"For complex product and market questions, AXIVIA moves from shared understanding to strategic choice, then from strategy to action.",
+phase1:"Build a shared understanding of the current strategy, technology, product, users, market, competition, organisation and constraints.", phase1Deliver:"Core output: AXIVIA Insight Map",
+phase2:"Turn understanding into choices through segmentation, opportunity identification, needs, value, competitive analysis and prioritisation.", phase2Deliver:"Core output: AXIVIA Strategic Blueprint",
+phase3:"Translate strategy into product priorities, roadmaps, experimentation, launch preparation, alignment and measures.", phase3Deliver:"Core output: AXIVIA Activation Roadmap",
+sectorEyebrow:"Where complexity matters", sectorTitle:"Built for technology-driven environments.", sectorLead:"AXIVIA is intentionally multi-sector. The common denominator is not the industry — it is the complexity of the product, technology and decision.",
+sector1:"Industrial technology", sector2:"Medtech & health technology", sector3:"Deeptech", sector4:"Robotics & automation", sector5:"Energy & sustainable technologies", sector6:"Precision technologies", sector7:"Watchmaking",
+outcomeEyebrow:"What you leave with", outcomeTitle:"Not more pages. Better decisions.", outcome1Title:"A clearer understanding", outcome1Text:"The situation, evidence, assumptions and questions are made explicit.", outcome2Title:"Clearer choices & priorities", outcome2Text:"Options and trade-offs are structured so the organisation can decide what deserves attention.", outcome3Title:"An argued recommendation", outcome3Text:"The strategic direction is grounded in relevant evidence rather than presentation volume.", outcome4Title:"A realistic path forward", outcome4Text:"The decision becomes priorities, actions, ownership and next steps.",
+perspEyebrow:"Perspectives", perspTitle:"Ideas worth thinking about before the next decision.", persp1Title:"From technology to value", persp1Text:"A technical capability becomes strategically interesting when it solves a meaningful user problem in a viable market.", persp2Title:"The cost of too many opportunities", persp2Text:"More options do not automatically create more growth. Strategic value often comes from deciding what not to pursue.", persp3Title:"Strategy before execution", persp3Text:"When the decision is unclear, adding execution rarely solves the underlying problem. Clarity has to come first.", perspCta:"Discuss the question →",
     navDiagnostic:"Your situation",
 diagEyebrow:"A different starting point", diagTitle:"What are you trying to decide?", diagLead:"You don't need to know which service you need. Start with the situation. We'll start there too.",
 diag1:"I have an opportunity.", diag2:"I have a product problem.", diag3:"I have a technology looking for a market.", diag4:"I need to make a strategic decision.",
@@ -588,6 +717,17 @@ surpriseEyebrow:"One last question", surpriseTitle:"There is probably a question
     footerCopyright:"© 2026 AXIVIA Sàrl · Switzerland", footerAddress:"Ch. des Charrières 1e · Saint-Aubin-Sauges"
   },
   fr: {
+    navPerspectives:"Perspectives",
+capEyebrow:"Ce que nous accompagnons", capTitle:"La question porte parfois sur le produit. La décision est souvent plus large.", capLead:"AXIVIA intervient sur les questions produit, technologie et marché qui se trouvent derrière les décisions stratégiques importantes.",
+cap1Title:"Opportunités & croissance", cap1Text:"Évaluer de nouveaux produits, technologies, applications, marchés, segments et moteurs de croissance.", cap2Title:"Stratégie produit", cap2Text:"Clarifier la direction produit, les choix de portefeuille, la proposition de valeur et les priorités.", cap3Title:"De la technologie au marché", cap3Text:"Relier les capacités technologiques aux utilisateurs, applications et besoins du marché pour identifier où créer de la valeur.", cap4Title:"Alignement stratégique", cap4Text:"Créer une compréhension commune entre R&D, Produit, Commercial et Direction autour des choix qui comptent.",
+processEyebrow:"Comment fonctionne un partenariat approfondi", processTitle:"Discover. Define. Activate.", processLead:"Pour les enjeux produit et marché complexes, AXIVIA passe d'une compréhension commune au choix stratégique, puis de la stratégie à l'action.",
+phase1:"Construire une compréhension commune de la stratégie actuelle, de la technologie, du produit, des utilisateurs, du marché, de la concurrence, de l'organisation et des contraintes.", phase1Deliver:"Livrable central : AXIVIA Insight Map",
+phase2:"Transformer la compréhension en choix grâce à la segmentation, l'identification des opportunités, les besoins, la valeur, l'analyse concurrentielle et la priorisation.", phase2Deliver:"Livrable central : AXIVIA Strategic Blueprint",
+phase3:"Transformer la stratégie en priorités produit, feuille de route, expérimentation, préparation du lancement, alignement et indicateurs.", phase3Deliver:"Livrable central : AXIVIA Activation Roadmap",
+sectorEyebrow:"Là où la complexité compte", sectorTitle:"Pensé pour les environnements technologiques.", sectorLead:"AXIVIA est volontairement multisectorielle. Le dénominateur commun n'est pas l'industrie, mais la complexité du produit, de la technologie et de la décision.",
+sector1:"Technologies industrielles", sector2:"Medtech & technologies de santé", sector3:"Deeptech", sector4:"Robotique & automatisation", sector5:"Énergie & technologies durables", sector6:"Technologies de précision", sector7:"Horlogerie",
+outcomeEyebrow:"Ce que vous obtenez", outcomeTitle:"Pas plus de pages. De meilleures décisions.", outcome1Title:"Une compréhension plus claire", outcome1Text:"La situation, les preuves, les hypothèses et les questions sont rendues explicites.", outcome2Title:"Des choix & priorités plus clairs", outcome2Text:"Les options et arbitrages sont structurés afin de décider ce qui mérite réellement de l'attention.", outcome3Title:"Une recommandation argumentée", outcome3Text:"La direction stratégique repose sur des éléments pertinents, pas sur le volume de présentation.", outcome4Title:"Une trajectoire réaliste", outcome4Text:"La décision devient priorités, actions, responsabilités et prochaines étapes.",
+perspEyebrow:"Perspectives", perspTitle:"Des idées utiles avant la prochaine décision.", persp1Title:"De la technologie à la valeur", persp1Text:"Une capacité technique devient stratégiquement intéressante lorsqu'elle répond à un besoin utilisateur réel sur un marché viable.", persp2Title:"Le coût d'avoir trop d'opportunités", persp2Text:"Plus d'options ne signifie pas automatiquement plus de croissance. La valeur stratégique vient souvent du choix de ce que l'on ne poursuit pas.", persp3Title:"La stratégie avant l'exécution", persp3Text:"Lorsque la décision est floue, ajouter de l'exécution ne résout généralement pas le problème sous-jacent. La clarté doit venir d'abord.", perspCta:"Parlons de la question →",
     navDiagnostic:"Votre situation",
 diagEyebrow:"Une autre façon de commencer", diagTitle:"Quelle décision cherchez-vous à prendre ?", diagLead:"Vous n'avez pas besoin de savoir quelle prestation choisir. Commencez par votre situation. Nous partirons de là, nous aussi.",
 diag1:"J'ai une opportunité.", diag2:"J'ai un problème produit.", diag3:"J'ai une technologie qui cherche son marché.", diag4:"Je dois prendre une décision stratégique.",

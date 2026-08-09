@@ -1,38 +1,24 @@
-AXIVIA — GitHub Pages Website V1
+AXIVIA WEBSITE V6 — COMPLETE SHOWCASE
+Bilingual EN/FR one-page website.
 
-FILES
------
-index.html  = complete one-page website (HTML/CSS/JS, logo embedded)
-CNAME       = custom domain axivia.ch
-assets/     = logo source files (also useful for future updates)
+This version restores the complete website architecture from the AXIVIA Brand Identity and Offers & Methodology masters while keeping the site experiential.
 
-QUICK PUBLISH
--------------
-1. Create/sign in to GitHub.
-2. Create a PUBLIC repository, e.g. axivia-website.
-3. Upload index.html and CNAME (assets are optional for the current index.html).
-4. Repository → Settings → Pages.
-5. Source: Deploy from a branch.
-6. Branch: main / root.
-7. Save.
-8. Under Custom domain, enter axivia.ch.
-9. In Infomaniak DNS, point axivia.ch to GitHub Pages as described in GitHub's
-   current custom-domain documentation.
-10. Wait for DNS/HTTPS propagation.
+Included:
+- Positioning / proposition
+- Technology × Users × Market lens
+- Opportunity Sprint
+- Strategic Product Partnership
+- Interactive situation diagnostic
+- Concrete client problems
+- Capability areas
+- Discover / Define / Activate methodology
+- Audience and sector context
+- Explicit outcomes
+- Human / founder relationship
+- Perspectives / editorial layer
+- Contact: yannick.broillet@axivia.ch
 
-IMPORTANT BEFORE PUBLICATION
-----------------------------
-The contact CTA currently uses hello@axivia.ch. Create this mailbox in Infomaniak
-or replace the address in index.html before publishing.
-
-The website uses the approved AXIVIA logo and the current brand direction:
-Premium Editorial, Navy + Electric Blue, "Product Strategy Partner", and
-"Turning Complexity into Clarity."
-
-The strategic framework Technology / Users / Market is presented as an
-internal strategic lens, not as the public brand tagline.
-
-DOMAIN
-------
-CNAME is already set to:
-axivia.ch
+Deployment:
+Replace only index.html in the existing GitHub Pages repository.
+Keep the existing CNAME and assets.
+Do not change Infomaniak DNS.
