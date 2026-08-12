@@ -3,680 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>AXIVIA — Product Strategy Partner</title>
-
-  <meta
-    name="description"
-    content="AXIVIA aide les entreprises technologiques à transformer la complexité en décisions claires en matière de produit et de marché."
-  >
-
+  <meta name="description" content="AXIVIA aide les entreprises technologiques à transformer la complexité en décisions claires en matière de produit et de marché.">
   <link rel="icon" type="image/png" href="../assets/axivia-mark.png">
 
   <style>
     :root {
-      --navy: #06142f;
-      --navy-2: #091b3d;
-      --blue: #0878ff;
-      --cyan: #16d9ff;
-      --white: #ffffff;
-      --text: #0b1830;
-      --muted: #64728a;
-      --light: #f5f7fb;
-      --border: rgba(10, 31, 65, 0.12);
-      --max: 1180px;
+      --navy:#06142f; --navy-2:#091b3d; --blue:#0878ff; --cyan:#16d9ff;
+      --white:#fff; --text:#0b1830; --muted:#64728a; --light:#f5f7fb;
+      --border:rgba(10,31,65,.12); --max:1180px;
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 48px));margin:0 auto}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(10,31,65,.08)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .nav-logo{width:205px}.nav-links{display:flex;align-items:center;gap:34px;font-size:14px;font-weight:600;color:#26344b}
+    .nav-links a{transition:opacity .2s}.nav-links a:hover{opacity:.55}
+    .nav-actions{display:flex;align-items:center;gap:18px}.language{font-size:13px;font-weight:700;color:#26344b}
+    .language a{opacity:.45}.language a.active{opacity:1;color:var(--blue)}
+    .nav-cta{padding:11px 20px;border-radius:999px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;transition:transform .2s,background .2s}
+    .nav-cta:hover{transform:translateY(-1px);background:#0b2552}
+    .mobile-menu{display:none;border:0;background:none;font-size:27px;cursor:pointer;color:var(--navy)}
 
-    html {
-      scroll-behavior: smooth;
-    }
+    .hero{min-height:100vh;padding:170px 0 100px;background:radial-gradient(circle at 85% 20%,rgba(0,135,255,.18),transparent 32%),linear-gradient(135deg,#06142f 0%,#071b3d 55%,#06142f 100%);color:#fff;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:80px}
+    .hero-logo{width:350px;margin-bottom:48px}.eyebrow{color:#25cfff;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;margin-bottom:20px}
+    h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-.055em;max-width:720px;margin-bottom:30px}
+    .hero-copy{max-width:640px;font-size:20px;line-height:1.65;color:#c8d5eb;margin-bottom:38px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 27px;border-radius:999px;font-size:14px;font-weight:800;transition:all .2s}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 30px rgba(0,120,255,.25)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(0,120,255,.35)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.02)}.btn-secondary:hover{background:rgba(255,255,255,.07)}
+    .hero-visual{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
+    .visual-card{width:min(500px,100%);aspect-ratio:1;border:1px solid rgba(255,255,255,.1);border-radius:32px;background:radial-gradient(circle at 50% 45%,rgba(0,137,255,.22),transparent 42%),rgba(255,255,255,.025);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .visual-card:before,.visual-card:after{content:"";position:absolute;border:1px solid rgba(0,180,255,.18);border-radius:50%}.visual-card:before{width:72%;height:72%}.visual-card:after{width:45%;height:45%}
+    .visual-mark{width:220px;position:relative;z-index:2}
 
-    body {
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    .section{padding:120px 0}.section-light{background:#fff}.section-soft{background:var(--light)}.section-dark{background:var(--navy);color:#fff}
+    .section-header{max-width:760px;margin-bottom:70px}.section-header h2{font-size:clamp(38px,4.5vw,62px);line-height:1.05;letter-spacing:-.045em;margin-bottom:22px}
+    .section-header p{font-size:18px;color:var(--muted);max-width:680px}.section-dark .section-header p{color:#afbdd2}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 48px));
-      margin: 0 auto;
-    }
+    .framework{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+    .framework-item{background:#fff;padding:45px;min-height:280px}.framework-number{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.15em;margin-bottom:42px}
+    .framework-item h3{font-size:27px;margin-bottom:14px;letter-spacing:-.025em}.framework-item p{color:var(--muted);font-size:15px}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.service{padding:48px;border:1px solid rgba(255,255,255,.11);border-radius:22px;background:rgba(255,255,255,.035);transition:transform .25s,border-color .25s}
+    .service:hover{transform:translateY(-4px);border-color:rgba(0,160,255,.45)}.service-number{font-size:12px;color:#19cfff;font-weight:800;letter-spacing:.18em;margin-bottom:35px}
+    .service h3{font-size:29px;margin-bottom:15px}.service p{color:#afbdd2;max-width:520px}
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}.large-text{font-size:clamp(27px,3vw,42px);line-height:1.18;letter-spacing:-.035em}
+    .check-list{list-style:none;display:grid;gap:20px}.check-list li{padding-left:30px;position:relative;font-size:17px}.check-list li:before{content:"→";position:absolute;left:0;color:var(--blue);font-weight:800}
+    .statement{max-width:980px;font-size:clamp(38px,5vw,70px);line-height:1.04;letter-spacing:-.05em}.statement span{color:#168aff}
 
     /* =========================
-       HEADER
+       ORIENTATION — QUEL PROBLÈME ?
     ========================= */
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(10, 31, 65, 0.08);
-    }
-
-    .nav {
-      height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-    }
-
-    .nav-logo {
-      width: 205px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #26344b;
-    }
-
-    .nav-links a {
-      transition: opacity 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.55;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .language {
-      font-size: 13px;
-      font-weight: 700;
-      color: #26344b;
-    }
-
-    .language a {
-      opacity: 0.45;
-    }
-
-    .language a.active {
-      opacity: 1;
-      color: var(--blue);
-    }
-
-    .nav-cta {
-      padding: 11px 20px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: white;
-      font-size: 13px;
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      background: #0b2552;
-    }
-
-    .mobile-menu {
-      display: none;
-      border: 0;
-      background: none;
-      font-size: 27px;
-      cursor: pointer;
-      color: var(--navy);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-      padding: 170px 0 100px;
-      background:
-        radial-gradient(
-          circle at 85% 20%,
-          rgba(0, 135, 255, 0.18),
-          transparent 32%
-        ),
-        linear-gradient(
-          135deg,
-          #06142f 0%,
-          #071b3d 55%,
-          #06142f 100%
-        );
-      color: white;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 80px;
-    }
-
-    .hero-logo {
-      width: 350px;
-      margin-bottom: 48px;
-    }
-
-    .eyebrow {
-      color: #25cfff;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 6vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      max-width: 720px;
-      margin-bottom: 30px;
-    }
-
-    .hero-copy {
-      max-width: 640px;
-      font-size: 20px;
-      line-height: 1.65;
-      color: #c8d5eb;
-      margin-bottom: 38px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 27px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 800;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: white;
-      box-shadow: 0 10px 30px rgba(0, 120, 255, 0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 35px rgba(0, 120, 255, 0.35);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: white;
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .visual-card {
-      width: min(500px, 100%);
-      aspect-ratio: 1 / 1;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 32px;
-      background:
-        radial-gradient(
-          circle at 50% 45%,
-          rgba(0, 137, 255, 0.22),
-          transparent 42%
-        ),
-        rgba(255, 255, 255, 0.025);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .visual-card::before,
-    .visual-card::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(0, 180, 255, 0.18);
-      border-radius: 50%;
-    }
-
-    .visual-card::before {
-      width: 72%;
-      height: 72%;
-    }
-
-    .visual-card::after {
-      width: 45%;
-      height: 45%;
-    }
-
-    .visual-mark {
-      width: 220px;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-      padding: 120px 0;
-    }
-
-    .section-light {
-      background: white;
-    }
-
-    .section-soft {
-      background: var(--light);
-    }
-
-    .section-dark {
-      background: var(--navy);
-      color: white;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 70px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(38px, 4.5vw, 62px);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-      margin-bottom: 22px;
-    }
-
-    .section-header p {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 680px;
-    }
-
-    .section-dark .section-header p {
-      color: #afbdd2;
-    }
-
-    /* =========================
-       APPROCHE
-    ========================= */
-
-    .framework {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-
-    .framework-item {
-      background: white;
-      padding: 45px;
-      min-height: 280px;
-    }
-
-    .framework-number {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      margin-bottom: 42px;
-    }
-
-    .framework-item h3 {
-      font-size: 27px;
-      margin-bottom: 14px;
-      letter-spacing: -0.025em;
-    }
-
-    .framework-item p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .service {
-      padding: 48px;
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.035);
-      transition:
-        transform 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-4px);
-      border-color: rgba(0, 160, 255, 0.45);
-    }
-
-    .service-number {
-      font-size: 12px;
-      color: #19cfff;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      margin-bottom: 35px;
-    }
-
-    .service h3 {
-      font-size: 29px;
-      margin-bottom: 15px;
-    }
-
-    .service p {
-      color: #afbdd2;
-      max-width: 520px;
-    }
-
-    /* =========================
-       POUR QUI
-    ========================= */
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 90px;
-      align-items: start;
-    }
-
-    .large-text {
-      font-size: clamp(27px, 3vw, 42px);
-      line-height: 1.18;
-      letter-spacing: -0.035em;
-    }
-
-    .check-list {
-      list-style: none;
-      display: grid;
-      gap: 20px;
-    }
-
-    .check-list li {
-      padding-left: 30px;
-      position: relative;
-      font-size: 17px;
-    }
-
-    .check-list li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 800;
-    }
-
-    /* =========================
-       POSITIONNEMENT
-    ========================= */
-
-    .statement {
-      max-width: 980px;
-      font-size: clamp(38px, 5vw, 70px);
-      line-height: 1.04;
-      letter-spacing: -0.05em;
-    }
-
-    .statement span {
-      color: #168aff;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      background:
-        radial-gradient(
-          circle at 80% 30%,
-          rgba(0, 135, 255, 0.18),
-          transparent 30%
-        ),
-        var(--navy);
-      color: white;
-      padding: 120px 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.7fr;
-      gap: 100px;
-      align-items: end;
-    }
-
-    .contact h2 {
-      font-size: clamp(45px, 6vw, 78px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      margin-bottom: 28px;
-    }
-
-    .contact p {
-      color: #b7c5da;
-      font-size: 18px;
-      max-width: 620px;
-    }
-
-    .contact-link {
-      font-size: 21px;
-      font-weight: 700;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 8px;
-      display: inline-block;
-      margin-top: 32px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #030d20;
-      color: white;
-      padding: 60px 0 35px;
-    }
-
-    .footer-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 50px;
-      padding-bottom: 55px;
-    }
-
-    .footer-logo {
-      width: 220px;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      font-size: 13px;
-      color: #9eacc1;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 25px;
-      color: #697890;
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 950px) {
-
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-
-      .hero-grid,
-      .two-column,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 140px;
-      }
-
-      .hero-visual {
-        min-height: 350px;
-      }
-
-      .framework {
-        grid-template-columns: 1fr;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-grid {
-        gap: 50px;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: min(var(--max), calc(100% - 32px));
-      }
-
-      .nav {
-        height: 70px;
-      }
-
-      .nav-logo {
-        width: 165px;
-      }
-
-      .hero {
-        padding: 120px 0 80px;
-      }
-
-      .hero-logo {
-        width: 260px;
-        margin-bottom: 35px;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      .hero-copy {
-        font-size: 17px;
-      }
-
-      .section,
-      .contact {
-        padding: 80px 0;
-      }
-
-      .framework-item,
-      .service {
-        padding: 32px;
-      }
-
-      .footer-top,
-      .footer-bottom {
-        flex-direction: column;
-      }
-
-      .footer-logo {
-        width: 190px;
-      }
+    .challenge-panel{background:radial-gradient(circle at 15% 20%,rgba(0,135,255,.14),transparent 30%),linear-gradient(135deg,#071a3a 0%,#06142f 100%);color:#fff}
+    .challenge-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+    .challenge-intro h2{font-size:clamp(38px,4.5vw,62px);line-height:1.02;letter-spacing:-.045em;margin-bottom:22px}
+    .challenge-intro p{color:#b7c5da;font-size:17px;max-width:470px}
+    .challenge-options{display:grid;gap:12px}
+    .challenge-option{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.035);color:#fff;padding:22px 24px;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:25px;transition:transform .2s,border-color .2s,background .2s;font:inherit}
+    .challenge-option:hover,.challenge-option:focus-visible{transform:translateX(4px);border-color:rgba(22,217,255,.55);background:rgba(255,255,255,.07);outline:none}
+    .challenge-option strong{display:block;font-size:17px;line-height:1.35;margin-bottom:4px}.challenge-option span{color:#9eacc1;font-size:13px;line-height:1.45}.challenge-arrow{color:#20d6ff;font-size:22px;flex:0 0 auto}
+    .challenge-result{display:none;margin-top:24px;padding:28px;border:1px solid rgba(22,217,255,.25);border-radius:20px;background:rgba(255,255,255,.055)}
+    .challenge-result.active{display:block;animation:challengeFade .25s ease}.challenge-result .result-label{color:#20d6ff;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;margin-bottom:10px}
+    .challenge-result h3{font-size:27px;margin-bottom:10px}.challenge-result p{color:#b7c5da;font-size:15px;margin-bottom:20px;max-width:620px}
+    .challenge-result .result-actions{display:flex;flex-wrap:wrap;gap:12px}.challenge-reset{border:0;background:transparent;color:#9eacc1;font:inherit;font-size:13px;cursor:pointer;padding:12px 4px}.challenge-reset:hover{color:#fff}
+    @keyframes challengeFade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+    .contact{background:radial-gradient(circle at 80% 30%,rgba(0,135,255,.18),transparent 30%),var(--navy);color:#fff;padding:120px 0}
+    .contact-grid{display:grid;grid-template-columns:1fr .7fr;gap:100px;align-items:end}.contact h2{font-size:clamp(45px,6vw,78px);line-height:.98;letter-spacing:-.055em;margin-bottom:28px}
+    .contact p{color:#b7c5da;font-size:18px;max-width:620px}.contact-link{font-size:21px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:8px;display:inline-block;margin-top:32px}
+    footer{background:#030d20;color:#fff;padding:60px 0 35px}.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:50px;padding-bottom:55px}.footer-logo{width:220px}
+    .footer-nav{display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:#9eacc1}.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:25px;color:#697890;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+
+    @media (max-width:950px){
+      .nav-links,.nav-cta{display:none}.mobile-menu{display:block}.hero-grid,.two-column,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:140px}.hero-visual{min-height:350px}.framework{grid-template-columns:1fr}.services{grid-template-columns:1fr}.contact-grid{gap:50px}
+      .challenge-grid{grid-template-columns:1fr;gap:40px}
+    }
+    @media (max-width:600px){
+      .container{width:min(var(--max),calc(100% - 32px))}.nav{height:70px}.nav-logo{width:165px}.hero{padding:120px 0 80px}
+      .hero-logo{width:260px;margin-bottom:35px}h1{font-size:48px}.hero-copy{font-size:17px}.section,.contact{padding:80px 0}
+      .framework-item,.service{padding:32px}.footer-top,.footer-bottom{flex-direction:column}.footer-logo{width:190px}
+      .challenge-option{padding:19px 20px}.challenge-result{padding:23px}
     }
   </style>
 </head>
 
 <body>
-
-  <!-- =========================
-       HEADER
-  ========================= -->
-
   <header>
-
     <div class="container nav">
-
-      <!-- FOND CLAIR → LOGO DARK -->
       <a href="#top">
-        <img
-          class="nav-logo"
-          src="../assets/axivia-logo-dark.png"
-          alt="AXIVIA — Product Strategy Partner">
+        <img class="nav-logo" src="../assets/axivia-logo-dark.png" alt="AXIVIA — Product Strategy Partner">
       </a>
 
       <nav class="nav-links">
@@ -687,547 +109,285 @@
       </nav>
 
       <div class="nav-actions">
-
         <div class="language">
-          <a href="/">EN</a>
-          <span> / </span>
-          <a class="active" href="/fr/">FR</a>
+          <a href="/">EN</a><span> / </span><a class="active" href="/fr/">FR</a>
         </div>
-
-        <a class="nav-cta" href="#contact">
-          Parlons-en
-        </a>
-
-        <button
-          class="mobile-menu"
-          aria-label="Ouvrir le menu">
-          ☰
-        </button>
-
+        <a class="nav-cta" href="#contact">Parlons-en</a>
+        <button class="mobile-menu" aria-label="Ouvrir le menu">☰</button>
       </div>
-
     </div>
-
   </header>
-
 
   <main id="top">
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
     <section class="hero">
-
       <div class="container hero-grid">
-
         <div>
+          <img class="hero-logo" src="../assets/axivia-logo-light.png" alt="AXIVIA — Product Strategy Partner">
 
-          <!-- FOND FONCÉ → LOGO LIGHT -->
-          <img
-            class="hero-logo"
-            src="../assets/axivia-logo-light.png"
-            alt="AXIVIA — Product Strategy Partner">
+          <div class="eyebrow">Stratégie produit</div>
 
-          <div class="eyebrow">
-            Stratégie produit
-          </div>
-
-          <h1>
-            Transformer la complexité en clarté.
-          </h1>
+          <h1>Transformer la complexité en clarté.</h1>
 
           <p class="hero-copy">
-            Nous aidons les entreprises technologiques à prendre des
-            décisions plus claires en matière de produit et de marché —
-            et à transformer leurs choix stratégiques en actions.
+            Nous aidons les entreprises technologiques à prendre des décisions plus claires
+            en matière de produit et de marché — et à transformer leurs choix stratégiques en actions.
           </p>
 
           <div class="hero-actions">
-
-            <a
-              class="btn btn-primary"
-              href="#approche">
-              Découvrir notre approche&nbsp; →
-            </a>
-
-            <a
-              class="btn btn-secondary"
-              href="#contact">
-              Quel problème cherchez-vous à résoudre&nbsp; → 
-            </a>
-
+            <a class="btn btn-primary" href="#approche">Découvrir notre approche&nbsp; →</a>
+            <a class="btn btn-secondary" href="#challenge">Quel problème cherchez-vous à résoudre&nbsp; →</a>
           </div>
-
         </div>
-
 
         <div class="hero-visual">
-
           <div class="visual-card">
-
-            <img
-              class="visual-mark"
-              src="../assets/axivia-mark.png"
-              alt="AXIVIA">
-
+            <img class="visual-mark" src="../assets/axivia-mark.png" alt="AXIVIA">
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =========================
-         APPROCHE
-    ========================= -->
-
-    <section
-      class="section section-light"
-      id="approche">
-
+    <section class="section section-light" id="approche">
       <div class="container">
-
         <div class="section-header">
-
-          <div class="eyebrow">
-            Notre approche
-          </div>
-
-          <h2>
-            De la technologie<br>
-            à l’impact marché.
-          </h2>
-
+          <div class="eyebrow">Notre approche</div>
+          <h2>De la technologie<br>à l’impact marché.</h2>
           <p>
-            La technologie crée du potentiel. La stratégie permet de
-            le transformer en valeur. AXIVIA intervient à l’intersection
-            de la technologie, des utilisateurs et des réalités du marché.
+            La technologie crée du potentiel. La stratégie permet de le transformer en valeur.
+            AXIVIA intervient à l’intersection de la technologie, des utilisateurs et des réalités du marché.
           </p>
-
         </div>
-
 
         <div class="framework">
-
-
           <article class="framework-item">
-
-            <div class="framework-number">
-              01 — TECHNOLOGIE
-            </div>
-
-            <h3>
-              Qu’est-il possible de faire ?
-            </h3>
-
-            <p>
-              Nous clarifions la technologie, ses capacités et ses
-              contraintes afin de comprendre ce qui est réellement possible.
-            </p>
-
+            <div class="framework-number">01 — TECHNOLOGIE</div>
+            <h3>Qu’est-il possible de faire&nbsp;?</h3>
+            <p>Nous clarifions la technologie, ses capacités et ses contraintes afin de comprendre ce qui est réellement possible.</p>
           </article>
 
-
           <article class="framework-item">
-
-            <div class="framework-number">
-              02 — UTILISATEURS
-            </div>
-
-            <h3>
-              Qu’est-ce qui compte réellement ?
-            </h3>
-
-            <p>
-              Nous identifions les besoins, problèmes et comportements
-              réels des utilisateurs qui méritent d’être pris en compte.
-            </p>
-
+            <div class="framework-number">02 — UTILISATEURS</div>
+            <h3>Qu’est-ce qui compte réellement&nbsp;?</h3>
+            <p>Nous identifions les besoins, problèmes et comportements réels des utilisateurs qui méritent d’être pris en compte.</p>
           </article>
 
-
           <article class="framework-item">
-
-            <div class="framework-number">
-              03 — MARCHÉ
-            </div>
-
-            <h3>
-              Où se trouve la valeur ?
-            </h3>
-
-            <p>
-              Nous connectons les capacités technologiques aux besoins
-              des utilisateurs et aux opportunités de marché pertinentes.
-            </p>
-
+            <div class="framework-number">03 — MARCHÉ</div>
+            <h3>Où se trouve la valeur&nbsp;?</h3>
+            <p>Nous connectons les capacités technologiques aux besoins des utilisateurs et aux opportunités de marché pertinentes.</p>
           </article>
-
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section
-      class="section section-dark"
-      id="services">
-
+    <section class="section section-dark" id="services">
       <div class="container">
-
         <div class="section-header">
-
-          <div class="eyebrow">
-            Ce que nous faisons
-          </div>
-
-          <h2>
-            Une stratégie qui<br>
-            mène aux décisions.
-          </h2>
-
+          <div class="eyebrow">Ce que nous faisons</div>
+          <h2>Une stratégie qui<br>mène aux décisions.</h2>
           <p>
-            AXIVIA combine réflexion stratégique, expertise produit
-            et compréhension du marché pour aider les équipes à passer
-            de l’incertitude à l’action.
+            AXIVIA combine réflexion stratégique, expertise produit et compréhension du marché
+            pour aider les équipes à passer de l’incertitude à l’action.
           </p>
-
         </div>
-
 
         <div class="services">
-
-
           <article class="service">
-
-            <div class="service-number">
-              01
-            </div>
-
-            <h3>
-              Opportunity Sprint
-            </h3>
-
-            <p>
-              Une intervention ciblée pour évaluer une opportunité,
-              clarifier le problème, tester les hypothèses et déterminer
-              où concentrer les efforts stratégiques.
-            </p>
-
+            <div class="service-number">01</div>
+            <h3>Opportunity Sprint</h3>
+            <p>Une intervention ciblée pour évaluer une opportunité, clarifier le problème, tester les hypothèses et déterminer où concentrer les efforts stratégiques.</p>
           </article>
 
-
           <article class="service">
-
-            <div class="service-number">
-              02
-            </div>
-
-            <h3>
-              Strategic Product Partnership
-            </h3>
-
-            <p>
-              Un accompagnement stratégique continu pour les entreprises
-              confrontées à des décisions produit complexes, à des choix
-              de portefeuille ou au développement de nouveaux marchés.
-            </p>
-
+            <div class="service-number">02</div>
+            <h3>Strategic Product Partnership</h3>
+            <p>Un accompagnement stratégique continu pour les entreprises confrontées à des décisions produit complexes, à des choix de portefeuille ou au développement de nouveaux marchés.</p>
           </article>
 
-
           <article class="service">
-
-            <div class="service-number">
-              03
-            </div>
-
-            <h3>
-              Stratégie produit &amp; marché
-            </h3>
-
-            <p>
-              Nous aidons à déterminer où jouer, quoi développer et
-              comment connecter les décisions produit aux besoins réels
-              du marché.
-            </p>
-
+            <div class="service-number">03</div>
+            <h3>Stratégie produit &amp; marché</h3>
+            <p>Nous aidons à déterminer où jouer, quoi développer et comment connecter les décisions produit aux besoins réels du marché.</p>
           </article>
 
-
           <article class="service">
-
-            <div class="service-number">
-              04
-            </div>
-
-            <h3>
-              Aide à la décision stratégique
-            </h3>
-
-            <p>
-              Un regard indépendant pour les équipes dirigeantes
-              confrontées à des choix complexes, à l’incertitude ou
-              à des priorités concurrentes.
-            </p>
-
+            <div class="service-number">04</div>
+            <h3>Aide à la décision stratégique</h3>
+            <p>Un regard indépendant pour les équipes dirigeantes confrontées à des choix complexes, à l’incertitude ou à des priorités concurrentes.</p>
           </article>
-
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =========================
-         POUR QUI
-    ========================= -->
-
-    <section
-      class="section section-soft"
-      id="pour-qui">
-
+    <section class="section section-soft" id="pour-qui">
       <div class="container two-column">
-
-
         <div>
-
-          <div class="eyebrow">
-            Pour qui
-          </div>
-
-          <p class="large-text">
-            Pour les entreprises pour lesquelles la technologie
-            n’est qu’une partie du défi.
-          </p>
-
+          <div class="eyebrow">Pour qui</div>
+          <p class="large-text">Pour les entreprises pour lesquelles la technologie n’est qu’une partie du défi.</p>
         </div>
 
-
         <div>
-
           <ul class="check-list">
-
-            <li>
-              Entreprises technologiques
-            </li>
-
-            <li>
-              Entreprises industrielles et d’ingénierie
-            </li>
-
-            <li>
-              Équipes produit confrontées à des choix stratégiques
-            </li>
-
-            <li>
-              Équipes dirigeantes entrant sur de nouveaux marchés
-            </li>
-
-            <li>
-              Entreprises évaluant de nouvelles opportunités produit
-            </li>
-
+            <li>Entreprises technologiques</li>
+            <li>Entreprises industrielles et d’ingénierie</li>
+            <li>Équipes produit confrontées à des choix stratégiques</li>
+            <li>Équipes dirigeantes entrant sur de nouveaux marchés</li>
+            <li>Entreprises évaluant de nouvelles opportunités produit</li>
           </ul>
-
         </div>
-
-
       </div>
-
     </section>
-
-
-    <!-- =========================
-         POSITIONNEMENT
-    ========================= -->
 
     <section class="section section-light">
-
       <div class="container">
-
         <p class="statement">
           Nous n’ajoutons pas de complexité aux problèmes complexes.
           Nous créons <span>la clarté nécessaire pour mieux décider.</span>
         </p>
-
       </div>
-
     </section>
-
 
     <!-- =========================
-         CONTACT
+         ORIENTATION
     ========================= -->
+    <section class="section challenge-panel" id="challenge">
+      <div class="container challenge-grid">
 
-    <section
-      class="contact"
-      id="contact">
-
-      <div class="container contact-grid">
-
-
-        <div>
-
-          <!-- FOND FONCÉ → LOGO LIGHT -->
-          <img
-            class="footer-logo"
-            src="../assets/axivia-logo-light.png"
-            alt="AXIVIA — Product Strategy Partner"
-            style="width:250px;margin-bottom:45px;">
-
-          <h2>
-            Rendons votre<br>
-            prochaine décision plus claire.
-          </h2>
-
+        <div class="challenge-intro">
+          <div class="eyebrow">Trouvez le bon point de départ</div>
+          <h2>Quel problème cherchez-vous à résoudre&nbsp;?</h2>
           <p>
-            Expliquez-nous ce que vous cherchez à résoudre, à décider
-            ou à construire. Nous verrons ensemble si AXIVIA peut vous aider.
+            Dites-nous ce que vous cherchez à résoudre. AXIVIA vous orientera
+            vers la manière la plus pertinente d’entamer la conversation.
           </p>
-
         </div>
 
-
         <div>
+          <div class="challenge-options">
 
-          <div class="eyebrow">
-            Démarrer une conversation
+            <button class="challenge-option" type="button" data-result="opportunity">
+              <div>
+                <strong>J’évalue une nouvelle opportunité</strong>
+                <span>Je souhaite évaluer une opportunité, un problème, un marché ou mes hypothèses.</span>
+              </div>
+              <span class="challenge-arrow">→</span>
+            </button>
+
+            <button class="challenge-option" type="button" data-result="strategy">
+              <div>
+                <strong>Je dois prendre une décision stratégique sur mon produit</strong>
+                <span>J’ai besoin de clarté sur mon positionnement, mes priorités, ma direction produit ou mon portefeuille.</span>
+              </div>
+              <span class="challenge-arrow">→</span>
+            </button>
+
+            <button class="challenge-option" type="button" data-result="direction">
+              <div>
+                <strong>Mon produit manque de direction</strong>
+                <span>Je dois reconnecter mes décisions produit aux utilisateurs, au marché et aux objectifs de l’entreprise.</span>
+              </div>
+              <span class="challenge-arrow">→</span>
+            </button>
+
+            <button class="challenge-option" type="button" data-result="partner">
+              <div>
+                <strong>Je recherche un partenaire produit expérimenté</strong>
+                <span>J’ai besoin d’un accompagnement stratégique senior sans constituer une équipe complète en interne.</span>
+              </div>
+              <span class="challenge-arrow">→</span>
+            </button>
+
+            <button class="challenge-option" type="button" data-result="unsure">
+              <div>
+                <strong>Je ne sais pas encore exactement de quoi j’ai besoin</strong>
+                <span>J’ai une problématique, mais j’ai besoin d’aide pour définir le bon point de départ.</span>
+              </div>
+              <span class="challenge-arrow">→</span>
+            </button>
+
           </div>
 
-          <a
-            class="contact-link"
-            href="mailto:hello@axivia.ch">
-            hello@axivia.ch
-          </a>
-
-          <br>
-          <br>
-
-          <a
-            class="contact-link"
-            href="https://www.axivia.ch">
-            axivia.ch
-          </a>
-
+          <div class="challenge-result" id="challenge-result" aria-live="polite">
+            <div class="result-label">Recommandation AXIVIA</div>
+            <h3 id="result-title"></h3>
+            <p id="result-copy"></p>
+            <div class="result-actions">
+              <a class="btn btn-primary" id="result-link" href="#services">Découvrir l’approche →</a>
+              <a class="btn btn-secondary" href="#contact">Parler à AXIVIA →</a>
+              <button class="challenge-reset" type="button" id="challenge-reset">Choisir un autre besoin</button>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
     </section>
 
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <img class="footer-logo" src="../assets/axivia-logo-light.png" alt="AXIVIA — Product Strategy Partner" style="width:250px;margin-bottom:45px;">
+
+          <h2>Rendons votre<br>prochaine décision plus claire.</h2>
+
+          <p>
+            Expliquez-nous ce que vous cherchez à résoudre, à décider ou à construire.
+            Nous verrons ensemble si AXIVIA peut vous aider.
+          </p>
+        </div>
+
+        <div>
+          <div class="eyebrow">Démarrer une conversation</div>
+
+          <a class="contact-link" href="mailto:hello@axivia.ch">hello@axivia.ch</a>
+          <br><br>
+          <a class="contact-link" href="https://axivia.ch">axivia.ch</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
   <footer>
-
     <div class="container">
-
-
       <div class="footer-top">
-
-        <!-- FOND FONCÉ → LOGO LIGHT -->
-        <img
-          class="footer-logo"
-          src="../assets/axivia-logo-light.png"
-          alt="AXIVIA — Product Strategy Partner">
-
+        <img class="footer-logo" src="../assets/axivia-logo-light.png" alt="AXIVIA — Product Strategy Partner">
 
         <nav class="footer-nav">
-
-          <a href="#approche">
-            Approche
-          </a>
-
-          <a href="#services">
-            Services
-          </a>
-
-          <a href="#pour-qui">
-            Pour qui
-          </a>
-
-          <a href="#contact">
-            Contact
-          </a>
-
-          <a href="/">
-            English
-          </a>
-
+          <a href="#approche">Approche</a>
+          <a href="#services">Services</a>
+          <a href="#pour-qui">Pour qui</a>
+          <a href="#challenge">Quel problème&nbsp;?</a>
+          <a href="#contact">Contact</a>
+          <a href="/">English</a>
         </nav>
-
       </div>
-
 
       <div class="footer-bottom">
-
-        <span>
-          © 2026 AXIVIA. Tous droits réservés.
-        </span>
-
-        <span>
-          Product Strategy Partner
-        </span>
-
+        <span>© 2026 AXIVIA. Tous droits réservés.</span>
+        <span>Product Strategy Partner</span>
       </div>
-
-
     </div>
-
   </footer>
 
-
   <script>
-
     /*
-      AXIVIA — navigation mobile
+      AXIVIA — navigation mobile + orientation
       Aucun framework ni dépendance externe.
     */
 
     document.addEventListener("DOMContentLoaded", function () {
 
-      const mobileButton =
-        document.querySelector(".mobile-menu");
-
-      const navLinks =
-        document.querySelector(".nav-links");
-
+      const mobileButton = document.querySelector(".mobile-menu");
+      const navLinks = document.querySelector(".nav-links");
 
       if (mobileButton && navLinks) {
-
         mobileButton.addEventListener("click", function () {
-
-          const isOpen =
-            navLinks.style.display === "flex";
-
+          const isOpen = navLinks.style.display === "flex";
 
           if (isOpen) {
-
             navLinks.style.display = "";
-
           } else {
-
             navLinks.style.display = "flex";
-
             navLinks.style.position = "absolute";
             navLinks.style.top = "70px";
             navLinks.style.left = "0";
@@ -1236,18 +396,77 @@
             navLinks.style.background = "#ffffff";
             navLinks.style.flexDirection = "column";
             navLinks.style.alignItems = "flex-start";
-            navLinks.style.borderBottom =
-              "1px solid rgba(10,31,65,.1)";
-
+            navLinks.style.borderBottom = "1px solid rgba(10,31,65,.1)";
           }
-
         });
+      }
 
+      const challengeOptions = document.querySelectorAll(".challenge-option");
+      const challengeResult = document.getElementById("challenge-result");
+      const resultTitle = document.getElementById("result-title");
+      const resultCopy = document.getElementById("result-copy");
+      const resultLink = document.getElementById("result-link");
+      const challengeReset = document.getElementById("challenge-reset");
+
+      const challengeData = {
+        opportunity: {
+          title: "Opportunity Sprint",
+          copy: "Une intervention ciblée pour évaluer l’opportunité, clarifier le problème, tester les hypothèses et déterminer où concentrer les efforts stratégiques.",
+          link: "#services"
+        },
+        strategy: {
+          title: "Strategic Product Partnership",
+          copy: "Un accompagnement stratégique continu pour les décisions produit complexes, les choix de portefeuille, le positionnement et le développement de marché.",
+          link: "#services"
+        },
+        direction: {
+          title: "Stratégie produit & marché",
+          copy: "Nous vous aidons à déterminer où jouer, quoi développer et comment connecter les décisions produit aux besoins réels du marché.",
+          link: "#services"
+        },
+        partner: {
+          title: "Strategic Product Partnership",
+          copy: "Un regard stratégique senior et un accompagnement continu pour les entreprises confrontées à des décisions produit et marché complexes.",
+          link: "#services"
+        },
+        unsure: {
+          title: "Aide à la décision stratégique",
+          copy: "Vous n’avez pas besoin d’avoir la réponse avant de contacter AXIVIA. Nous pouvons commencer par clarifier le problème et identifier le prochain pas le plus utile.",
+          link: "#contact"
+        }
+      };
+
+      challengeOptions.forEach(function (option) {
+        option.addEventListener("click", function () {
+          const key = option.dataset.result;
+          const result = challengeData[key];
+
+          if (!result) return;
+
+          resultTitle.textContent = result.title;
+          resultCopy.textContent = result.copy;
+          resultLink.href = result.link;
+          challengeResult.classList.add("active");
+
+          challengeResult.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+          });
+        });
+      });
+
+      if (challengeReset) {
+        challengeReset.addEventListener("click", function () {
+          challengeResult.classList.remove("active");
+
+          document.getElementById("challenge").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        });
       }
 
     });
-
   </script>
-
 </body>
 </html>
